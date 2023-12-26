@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"hostscan/serverscan"
 	"net"
 	"os"
 	"time"
@@ -11,8 +12,8 @@ func main() {
 	var choice int
 	fmt.Println("1. portlari Tara")
 	fmt.Println("2. dns adresi bul")
-	fmt.Println("birseyler yap => ")
-	fmt.Println("seciminizi yapin(1 veya 2, 3)")
+	fmt.Println("3. Server admin panel scanner")
+	fmt.Println("seciminizi yapin(1  2 veya 3)")
 	fmt.Scan(&choice)
 
 	switch choice {
@@ -20,11 +21,50 @@ func main() {
 		portTara()
 	case 2:
 		dnsScan()
+	case 3:
+		getServerScan()
+
 	default:
 		fmt.Println("secim basarisiz, program sonlandiriliyor kuzen")
 		os.Exit(1)
 	}
+
 }
+
+func getServerScan() {
+	var urller, adminlist, kaydet string
+	var bftimeout float64
+	fmt.Println(`
+	##########################################
+	#                                        #
+	#        ServerScan Priv8 Exploit        #
+	#                                        #
+	##########################################
+	`)
+
+	/*	urller = os.Args[1]
+		adminlist = os.Args[2]
+
+		bftimeout, err := strconv.ParseFloat(os.Args[3], 64)
+		if err != nil {
+			fmt.Println("Hata: Timeout degeri float sekilde olmadilir kuzen ")
+			os.Exit(1)
+		}
+		kaydet = os.Args[4]*/
+	fmt.Print("sitelerin listelerinin adini giriniz: ")
+	fmt.Scan(&urller)
+
+	fmt.Print("admin listesinin adini girin: ")
+	fmt.Scan(&adminlist)
+
+	fmt.Print("timweout degeri girin (float olmali orn: 100): ")
+	fmt.Scan(&bftimeout)
+
+	fmt.Print("cikan sonuclari kaydetmek istiyormusunuz? (E/H): ")
+	fmt.Scan(&kaydet)
+	serverscan.RunScanner(urller, adminlist, bftimeout, kaydet)
+}
+
 func portTara() {
 	var target string
 
