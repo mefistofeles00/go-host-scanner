@@ -5,7 +5,8 @@
 ```bash 
 git clone https://github.com/mefistofeles00/go-host-scanner.git
 cd host-scanner
-go run scanner.go
+cd hostscan
+go run main.go
 ```
 **_you can use and developed it this little project :)_**
 
@@ -13,6 +14,9 @@ go run scanner.go
  ![program ciktisi](sc.png)
 
 
-## New module
+## modules 
 
- 
+1. [x] servercan admin panel tool
+
+
+

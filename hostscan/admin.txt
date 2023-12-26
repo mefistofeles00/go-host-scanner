@@ -1,0 +1,14 @@
+admin
+admin.php
+panel
+panel.php
+admin/login.php
+admin/panel.php
+panel/panel.php
+admin/login
+yonetim
+yonetim.php
+giris.php
+giris
+Admin
+Yonetim
