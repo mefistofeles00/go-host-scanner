@@ -11,7 +11,8 @@ func main() {
 	var choice int
 	fmt.Println("1. portlari Tara")
 	fmt.Println("2. dns adresi bul")
-	fmt.Println("seciminizi yapin(1 veya 2)")
+	fmt.Println("birseyler yap => ")
+	fmt.Println("seciminizi yapin(1 veya 2, 3)")
 	fmt.Scan(&choice)
 
 	switch choice {
