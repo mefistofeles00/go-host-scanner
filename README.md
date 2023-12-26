@@ -17,6 +17,7 @@ go run main.go
 ## modules 
 
 1. [x] servercan admin panel tool
+2. server open ports informations (not yet)
 
 
 
