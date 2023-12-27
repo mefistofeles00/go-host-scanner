@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"hostscan/openportscan"
 	"hostscan/serverscan"
 	"net"
 	"os"
@@ -13,6 +14,7 @@ func main() {
 	fmt.Println("1. portlari Tara")
 	fmt.Println("2. dns adresi bul")
 	fmt.Println("3. Server admin panel scanner")
+	fmt.Println("4. Acik port Tara")
 	fmt.Println("seciminizi yapin(1  2 veya 3)")
 	fmt.Scan(&choice)
 
@@ -23,7 +25,8 @@ func main() {
 		dnsScan()
 	case 3:
 		getServerScan()
-
+	case 4:
+		openportscan.ScanPort()
 	default:
 		fmt.Println("secim basarisiz, program sonlandiriliyor kuzen")
 		os.Exit(1)
